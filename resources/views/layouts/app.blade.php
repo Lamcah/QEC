@@ -18,6 +18,8 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    {{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> --}}
+
 </head>
 <body>
     <div id="app">
@@ -79,5 +81,9 @@
             @yield('content')
         </main>
     </div>
+
+    {{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> --}}
+
 </body>
+
 </html>

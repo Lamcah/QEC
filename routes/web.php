@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PegawaiController;
 
 
 /*
@@ -25,9 +26,7 @@ Route::get('/tables', function () {
 
     /*=====Data Dashboard=====*/
 });
-Route::get('/datapegawai', function () {
-    return view('data.datapegawai');
-});
+
 Route::get('/datasiswa', function () {
     return view('data.datasiswa');
 });
@@ -53,3 +52,19 @@ Route::get('/masterins', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'index']);
+
+//==========PEGAWAI======================//
+// Route::get('/pegawai', [PegawaiController::class, 'index'])->name('pegawai.index');
+Route::get('/datapegawai', function (){ return view('data.pegawai.datapegawai');
+});
+Route::get('/tambahdatapegawai', function () {return view('data.pegawai.tambahdatapegawai');
+});
+// Route::get('/pegawai/create', [PegawaiController::class, 'create'])->name('pegawai.create');
+
+Route::post('/pegawai/store', [PegawaiController::class, 'store'])->name('pegawai.store');
+Route::get('/editdatapegawai', function () {return view('data.pegawai.editdatapegawai');
+});
+Route::get('/pegawai/{id}/edit', [PegawaiController::class, 'edit'])->name('pegawai.edit');
+Route::put('/pegawai/{id}', [PegawaiController::class, 'update'])->name('pegawai.update');
+Route::delete('/pegawai/{id}', [PegawaiController::class, 'destroy'])->name('pegawai.destroy');
+//////////////Instruktur///////////////////////
