@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\InstrukturController;
 
 
 /*
@@ -60,3 +61,9 @@ Route::post('/pegawaistore', [PegawaiController::class, 'store'])->name('pegawai
 // Route::get('/pegawai/{id}/edit', [PegawaiController::class, 'edit'])->name('pegawai.edit');
 Route::put('/pegawai/{id}', [PegawaiController::class, 'update'])->name('pegawai.update');
 Route::delete('/pegawai/{id}', [PegawaiController::class, 'destroy'])->name('pegawai.destroy');
+
+//=========INSTRUKTUR=====================//
+Route::get('/instruktur', [InstrukturController::class, 'index'])->name('instruktur.index');
+Route::post('/instrukturstore', [InstrukturController::class, 'store'])->name('instruktur.store');
+Route::put('/instruktur/{id}', [InstrukturController::class, 'update'])->name('instruktur.update');
+Route::delete('/instruktur/{id}', [InstrukturController::class, 'destroy'])->name('instruktur.destroy');

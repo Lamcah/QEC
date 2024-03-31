@@ -6,7 +6,7 @@
                 <div class="sb-nav-link-icon py-0 my-0"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
-            <a class="nav-link py-2" href="/datainstruktur">
+            <a class="nav-link py-2" href="/instruktur">
                 <div class="sb-nav-link-icon py-0 my-0"><i class="fas fa-tachometer-alt"></i></div>
                 Data Instruktur
             </a>

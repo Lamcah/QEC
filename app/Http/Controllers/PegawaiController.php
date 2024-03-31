@@ -16,13 +16,13 @@ class PegawaiController extends Controller
 
     }
 
-    // Method untuk menampilkan form tambah data pegawai
+    // // Method untuk menampilkan form tambah data pegawai
     
-    public function create()
-    {
-        return view('data.pegawai.tambahdatapegawai');
+    // public function create()
+    // {
+    //     return view('data.pegawai.tambahdatapegawai');
         
-    }
+    // }
 
     // Method untuk menyimpan data pegawai yang baru ditambahkan
 public function store(Request $request)
@@ -82,18 +82,6 @@ public function store(Request $request)
     }
 }
 
-
-    
-
-    // Method untuk menampilkan form edit data pegawai berdasarkan ID
-    public function edit($id)
-    // public function edit()
-    {
-        $pegawai = Pegawai::findOrFail($id);
-        // return view('data.pegawai.editdatapegawai', compact('pegawai'));
-        return view('data.pegawai.editdatapegawai');
-    }
-
     // Method untuk menyimpan data pegawai yang telah diedit
     public function update(Request $request, $id)
 {
@@ -110,7 +98,7 @@ public function store(Request $request)
         'nomor_telepon' => 'required|numeric|digits_between:10,15',
         'pendidikan_terakhir' => 'required',
         'tanggal_masuk' => 'required|date',
-        'foto' => 'image|max:2048', // Anda dapat menghapus kewajiban required untuk foto jika tidak ingin mengunggah foto saat mengedit
+        'foto' => 'image|max:2048', 
     ]);
 
     // Gabungkan kode wilayah dengan nomor telepon
