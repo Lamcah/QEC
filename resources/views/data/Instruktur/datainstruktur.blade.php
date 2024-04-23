@@ -215,7 +215,7 @@
                                 <div class="mb-2 col">
                                     <div class="form-floating">
                                         <input type="email" class="form-control" id="email" name="email"
-                                            required>
+                                           placeholder="Masukkan Email" required>
                                         <label for="email">Email</label>
                                     </div>
                                 </div>

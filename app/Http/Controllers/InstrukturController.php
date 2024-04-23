@@ -12,20 +12,10 @@ class InstrukturController extends Controller
     {
         $instruktur = Instruktur::all();
         return view('data.instruktur.datainstruktur', compact('instruktur'));
-        // return view('data.instruktur.datainstruktur');
-
+        
     }
 
-    // // Method untuk menampilkan form tambah data instruktur
-    
-    // public function create()
-    // {
-    //     return view('data.instruktur.tambahdatainstruktur');
-        
-    // }
-
-    // Method untuk menyimpan data instruktur yang baru ditambahkan
-public function store(Request $request)
+   public function store(Request $request)
 {
     // Validasi data input
     $validatedData = $request->validate([
@@ -49,9 +39,9 @@ public function store(Request $request)
     // Generate kode instruktur otomatis
     $latestPegawai = Instruktur::latest()->first();
     if ($latestPegawai) {
-        $kodePegawai = 'PG' . str_pad((int) substr($latestPegawai->kode_instruktur, 2) + 1, 4, '0', STR_PAD_LEFT);
+        $kodePegawai = 'IN' . str_pad((int) substr($latestPegawai->kode_instruktur, 2) + 1, 4, '0', STR_PAD_LEFT);
     } else {
-        $kodePegawai = 'PG0001';
+        $kodePegawai = 'IN0001';
     }
 
     // Simpan data instruktur ke dalam database
